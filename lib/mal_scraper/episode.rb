@@ -9,7 +9,8 @@ module MalScraper
       @original_title = title_data.css('span').text
       @date = episode_data.css('.episode-aired').text
       @score = episode_data.css('.episode-poll .value').text
-      @url = episode_data.css('.episode-forum a').attr('href').value
+      url_link = episode_data.css('.episode-forum a')
+      @url = url_link.attr('href').text if url_link.any?
     end
 
     def to_h

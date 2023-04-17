@@ -4,6 +4,7 @@ require 'nokogiri'
 require 'json'
 require 'faraday'
 require 'pry'
+require 'pry-byebug'
 
 require_relative 'mal_scraper/init'
 require_relative 'mal_scraper/episode'
